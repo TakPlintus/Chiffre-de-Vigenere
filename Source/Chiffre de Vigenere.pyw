@@ -4,7 +4,7 @@ from UI_file import Ui_MainWindow
 import sys
 
 eng_alphabet = 'abcdefghijklmnopqrstuvwxyz'
-rus_alphabet = 'абвгдежзийклмнопрстуфхцчшщъыьэюя'
+rus_alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
 
 
 class window(QtWidgets.QMainWindow):
@@ -60,11 +60,11 @@ class window(QtWidgets.QMainWindow):
                         x = j + 1
                         p, k = rus_alphabet.find((t[j]).lower()), rus_alphabet.find((key[j]).lower())
                         if self.ui.checkBox.isChecked():
-                            text2 += rus_alphabet[(p - k + 32) % 32].upper() if t[j].isupper() else rus_alphabet[
-                                (p - k + 32) % 32]
+                            text2 += rus_alphabet[(p - k + 33) % 33].upper() if t[j].isupper() else rus_alphabet[
+                                (p - k + 33) % 33]
                         else:
-                            text2 += rus_alphabet[(p + k) % 32].upper() if t[j].isupper() else rus_alphabet[
-                                (p + k) % 32]
+                            text2 += rus_alphabet[(p + k) % 33].upper() if t[j].isupper() else rus_alphabet[
+                                (p + k) % 33]
                     elif not t[j].lower().isalpha():
                         text2 += t[j]
                     else:
