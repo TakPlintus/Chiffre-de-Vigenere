@@ -253,7 +253,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Chiffre de Vigenère Beta"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Chiffre de Vigenère"))
         self.label.setText(_translate("MainWindow", "Chiffre de Vigenère"))
         self.lineEdit.setToolTip(_translate("MainWindow", "<html><head/><body><p>The key must be a word!</p></body></html>"))
         self.label_2.setText(_translate("MainWindow", "Enter the key"))
